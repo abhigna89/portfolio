@@ -1,0 +1,256 @@
+/* Light Mode (Default) */
+:root {
+    --background-color: #f8f9fa; /* Light gray */
+    --text-color: #343a40; /* Dark gray */
+    --heading-color: #046f63; /* Teal */
+    --nav-background: #116158; /* Teal */
+    --nav-text: #ffffff; /* White */
+    --section-background: #ffffff; /* White */
+    --button-background: #0d5a51; /* Teal */
+    --button-hover: #264653; /* Dark blue-green */
+    --skill-background: #0e574f; /* Teal */
+    --skill-text: #ffffff; /* White */
+    --accent-color: #d651e7; /* Coral */
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --background-color: #1a1a1a; /* Dark gray */
+    --text-color: #f0f0f0; /* Light gray */
+    --heading-color: #f1e96d; /* Coral */
+    --nav-background: #ffffff; /* Teal */
+    --nav-text: #020000; /* White */
+    --section-background: #524f5b; /* Teal */
+    --button-background: #f0eded; /* Coral */
+    --button-hover: #f39223; /* Teal */
+    --skill-background: #fff6f4; /* Coral */
+    --skill-text: #050000; /* White */
+    --accent-color: #bce9e4; /* Teal */
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--nav-background);
+    color: var(--nav-text);
+    padding: 10px 0;
+    position: space;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--nav-text);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Home Section */
+#home {
+    background-color: var(--section-background);
+    text-align: center;
+    padding: 100px 0;
+}
+
+#home .profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--heading-color);
+}
+
+#home h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#home .btn {
+    background-color: var(--button-background);
+    color: var(--nav-text);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#home .btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* About Section */
+#about {
+    background-color: var(--background-color);
+    padding: 80px 0;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Education Section */
+#education {
+    background-color: var(--section-background);
+    padding: 80px 0;
+}
+
+#education h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.education-item {
+    background-color: var(--background-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Skills Section */
+#skills {
+    background-color: var(--background-color);
+    padding: 80px 0;
+}
+
+#skills h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background-color: var(--skill-background);
+    color: var(--skill-text);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--section-background);
+    padding: 80px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#contact .btn {
+    background-color: var(--button-background);
+    color: var(--nav-text);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#contact .btn:hover {
+    background-color: var(--button-hover);
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links .social-link {
+    color: var(--button-background);
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links .social-link:hover {
+    color: var(--accent-color);
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--button-background);
+    color: var(--nav-text);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+#scroll-to-top:hover {
+    background-color: var(--button-hover);
+}
